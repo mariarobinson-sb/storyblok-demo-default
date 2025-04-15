@@ -1,5 +1,9 @@
 # Storyblok Default Demo
 
+> [!IMPORTANT]  
+> The repository for the new and updated default Storyblok demo is located here:<br>
+> https://github.com/storyblok/storyblok-demo-default-v2
+
 This frontend is shown when creating a new example space in your [Storyblok](https://storyblok.com) account. It is built using [Nuxt 3](https://v3.nuxtjs.org/) and [TailwindCSS](https://tailwindcss.com/). Feel free to explore and reuse the code.
 
 ## Setup
