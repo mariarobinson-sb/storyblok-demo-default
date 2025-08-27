@@ -21,9 +21,12 @@ const modules = [Autoplay, Navigation]
   >
     <swiper
       :slides-per-view="1"
-      :space-between="10"
       :navigation="true"
-      :autoplay="true"
+      :autoplay="{
+        delay: 6000, // 6 seconds
+        disableOnInteraction: false, // Optional: keeps autoplay running after user interaction
+      }"
+      :speed="1000"
       :auto-height="true"
       :modules="modules"
       :loop="true"
