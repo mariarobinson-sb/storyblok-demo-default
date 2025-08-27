@@ -1,11 +1,11 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation } from 'swiper/modules'
+import { Autoplay, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 const props = defineProps({ blok: Object })
 
-const modules = [Navigation]
+const modules = [Autoplay, Navigation]
 </script>
 
 <style scoped>
@@ -21,10 +21,15 @@ const modules = [Navigation]
   >
     <swiper
       :slides-per-view="1"
-      :space-between="50"
       :navigation="true"
+      :autoplay="{
+        delay: 6000, // 6 seconds
+        disableOnInteraction: false, // Optional: keeps autoplay running after user interaction
+      }"
+      :speed="1000"
       :auto-height="true"
       :modules="modules"
+      :loop="true"
       class="swiper"
     >
       <swiper-slide v-for="banner in blok.banners" :key="banner.uuid">
